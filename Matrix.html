@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table td{
+				border: 5px solid black;
+				padding: 15px;
+			}
+
+		</style>
+		<script>
+			var tableDef1 ="<table><tr><td>"; //opening table
+			var tableDef2 = "</td></tr></table>"; //closing table
+			var tablecol = "</td><td>"; 
+		</script>
+	</head>
+
+	<body>
+		<h1>Make a Matrix</h1>
+		<script>
+			//get the number of rows from user
+			var row_coordinates = prompt("Enter desired number of rows");
+			//get the number of columns from user
+			var column_coordinates = prompt("Enter desired number of rows");
+
+			//while rows are greater than 0
+			while (row_coordinates > 0) {
+				//write the table opening tags to the page
+				document.write(tableDef1);
+				//the user prompted columns is now cols
+				cols = column_coordinates;
+				//while the columns are greater than 0
+				while (cols > 1) { //loop through this while loop however many times column_coordinates is
+					//write a table column to the page
+					document.write(tablecol);
+					//now decrement columns by 1 and loop
+					cols = cols - 1;
+				}
+				//write the table closing tags to the page
+				document.write(tableDef2);
+				//decrement rows by 1 and loop (loop through the entire while loop however many times row_coordinates is)
+				row_coordinates = row_coordinates - 1;
+			}
+		
+		</script>
+	</body>
+</html>
